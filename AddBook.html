@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AddBook</title>
+    <link rel="stylesheet" href="Css/BooksStyle.css">
+    <link rel="icon" href="Images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background: url(#) no-repeat;
+            background-size: cover;
+            height: calc(100vh - 80px);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">Book</a>
+      
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item" >
+            <a class="nav-link" href="HomePage.html">Home</a>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              User
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="User Login.html">User Login</a>
+              <a class="dropdown-item" href="User Register.html">User Register</a>
+            </div>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Books
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="AddBook.html">Add Book</a>
+              <a class="dropdown-item" href="ReviewBook.html">Book Review</a>
+              <a class="dropdown-item" href="#">Update Book</a>
+              <a class="dropdown-item" href="View Books.html">View Book</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </br>
+  </br>
+</br>
+    <div class="container">
+      <div >
+        <h1 class="card-title text-center text-info" >Book Details</h1>
+        <br>
+      <form align="centre" class="col-xs-1 ">
+        <div class="row">
+            <div class="col">
+                </div>
+              <div class="col">
+                <input type="text" class="form-control" id="BId" placeholder="Book ID" name="Book Id">
+              </div>
+              <div class="col">
+              </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+                </div>
+              <div class="col">
+                <input type="text" class="form-control" id="Bname" placeholder="Book Title" name="Book Title">
+              </div>
+              <div class="col">
+              </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+                </div>
+              <div class="col">
+                <input type="text" class="form-control" id="Aname" placeholder="Author Name" name="Author Name">
+              </div>
+              <div class="col">
+              </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+                </div>
+                <div class="col"><select name="books" class="custom-select">
+                    <option selected>Genre</option>
+                    <option value="Male">Tech</option>
+                    <option value="Female">Story</option>
+                    <option value="Poem">Poem</option>
+                    <option value="Novel">Novel</option>
+                    
+                  </select>
+                  </div>
+              <div class="col">
+              </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+                </div>
+              <div class="col">
+                <input type="text" class="form-control" id="Price" placeholder="Price" name="Price">
+              </div>
+              <div class="col">
+              </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+                </div>
+              <div class="col">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Add</button>
+              </div>
+              <div class="col">
+              </div>
+          </div>
+        </form>
+       
+    </div>
+    </div>
+    </body>
+</html>

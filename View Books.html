@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>View Books</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Book</a>
+  
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item" >
+        <a class="nav-link" href="HomePage.html">Home</a>
+      </li>
+      <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          User
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="User Login.html">User Login</a>
+          <a class="dropdown-item" href="User Register.html">User Register</a>
+        </div>
+      </li>
+      <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Books
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="AddBook.html">Add Book</a>
+          <a class="dropdown-item" href="ReviewBook.html">Book Review</a>
+          <a class="dropdown-item" href="#">Update Book</a>
+          <a class="dropdown-item" href="View Books.html">View Book</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <br>
+  <br>
+  
+
+<div class="container mt-3">
+  <h2 class="text-info">Books</h2>
+  <p>Type something in the input field to search the table for Books:</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Search...">
+  <br>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Book ID</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Genre</th>
+        <th>Price</th>
+        
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>120</td>
+        <td>believe</td>
+        <td>Raina</td>
+        <td>documentary</td>
+        <td>1115</td>
+      </tr>
+      <tr>
+        <td>121</td>
+        <td>sunrise</td>
+        <td>Bhaskar</td>
+        <td>poem</td>
+        <td>12154</td>
+      </tr>
+      <tr>
+        <td>122</td>
+        <td>believe2</td>
+        <td>pruthvi</td>
+        <td>Novel</td>
+        <td>521.45</td>
+      </tr>
+      <tr>
+        <td>105</td>
+        <td>sunset</td>
+        <td>Andrea</td>
+        <td>poem</td>
+        <td>199.12</td>
+      </tr>
+      <tr>
+        <td>195</td>
+        <td>Rain</td>
+        <td>Bonolota</td>
+        <td>Poem</td>
+        <td>156.00</td>
+      </tr>
+      <tr>
+        <td>127</td>
+        <td>Java </td>
+        <td>DurgaPrasad</td>
+        <td>Tech</td>
+        <td>294.66</td>
+      </tr>
+      <tr>
+        <td>452</td>
+        <td>Ravendale</td>
+        <td>Byomni</td>
+        <td>Story</td>
+        <td>199.85</td>
+      </tr>
+      <tr>
+        <td>146</td>
+        <td>Python A Language</td>
+        <td>Sreenivas</td>
+        <td>Tech</td>
+        <td>423.60</td>
+      </tr>
+      <tr>
+        <td>199</td>
+        <td>tom and jerry</td>
+        <td> Nafreen</td>
+        <td>Story</td>
+        <td>211.09</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+</body>
+</html>
